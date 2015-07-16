@@ -6,8 +6,7 @@ $(function(){
 
         var counter = 0;
 
-        element.find('button').click(function() {
-
+        element.on('click', 'button', function() {
             var type = $(this).attr('class');
 
             if (type === 'incr') {
@@ -17,7 +16,7 @@ $(function(){
             };
 
             element.find('.number').html(counter);
-        });
+        })
 
         return {
             getCounter: function(){
