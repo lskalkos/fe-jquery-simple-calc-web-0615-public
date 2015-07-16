@@ -9,25 +9,31 @@ $(function(){
 
     var operation;
 
-    $('#number1 .incr').click(function() {
-        number_1 = number_1 + 1;
+
+    $('#number1 button').click(function() {
+
+        var type = $(this).attr('class');
+
+        if (type === 'incr') {
+            number_1 = number_1 + 1;
+        } else if (type === 'decr') {
+            number_1 = number_1 - 1;
+        };
+
         $number_1.html(number_1);
     });
 
-    $('#number1 .decr').click(function() {
-        number_1 = number_1 - 1;
-        $number_1.html(number_1);
-    });
 
+    $('#number2 button').click(function() {
 
+        var type = $(this).attr('class');
 
-    $('#number2 .incr').click(function() {
-        number_2 = number_2 + 1;
-        $number_2.html(number_2);
-    });
+        if (type === 'incr') {
+            number_2 = number_2 + 1;
+        } else if (type === 'decr') {
+            number_2 = number_2 - 1;
+        };
 
-    $('#number2 .decr').click(function() {
-        number_2 = number_2 - 1;
         $number_2.html(number_2);
     });
 
